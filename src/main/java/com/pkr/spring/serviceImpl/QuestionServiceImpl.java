@@ -75,7 +75,6 @@ public class QuestionServiceImpl implements QuestionService{
 			
 			Optional<Question> oldQuestion = questionRepo.findById(question.getId());
 			if(oldQuestion.isPresent()) {
-				System.out.println("SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS");
 				Question newQuestion = oldQuestion.get();
 				newQuestion.setDifficultyLevel(question.getDifficultyLevel());
 				newQuestion.setQuestionTitle(question.getQuestionTitle());
